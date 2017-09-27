@@ -22,6 +22,17 @@ class BinarySearchTree
 
   def search(some_node)
     # TODO
+    current_node = @root_node
+    while current_node != nil
+      if some_node.value > current_node.value
+        current_node = current_node.right_child
+      elsif some_node.value < current_node.value
+        current_node = current_node.left_child
+      elsif some_node.value == current_node.value
+        return current_node
+      end
+    end
+    return false
   end
 
   def insert(starting_node, new_node)
