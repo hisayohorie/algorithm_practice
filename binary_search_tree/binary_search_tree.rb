@@ -20,15 +20,14 @@ class BinarySearchTree
     @root_node = root_node
   end
 
-  def search(some_node)
-    # TODO
+  def search(value)
     current_node = @root_node
     while current_node != nil
-      if some_node.value > current_node.value
+      if value > current_node.value
         current_node = current_node.right_child
-      elsif some_node.value < current_node.value
+      elsif value < current_node.value
         current_node = current_node.left_child
-      elsif some_node.value == current_node.value
+      elsif value  == current_node.value
         return current_node
       end
     end
