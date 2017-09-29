@@ -36,3 +36,14 @@ list = TodoList.new
 list.add_task(firstTask)
 list.add_task(secondTask)
 list.add_task(thirdTask)
+
+#Define a method called word_counter that accepts one string argument and
+#returns a number representing how many separate words are in that string.
+
+def word_counter(sentence)
+	@sentence = sentence
+	words_arr = @sentence.split
+	return words_arr.count
+end
+
+#puts word_counter("Hello world")
